@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONDAY MORNIG </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&family=Heebo:wght@800&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            font-family: 'Heebo', sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 1fr  ;
+            /* grid-template-rows: 5fr; */
+            /* height: 500px; */
+            /* grid-template-columns: repeat(auto-fit,minmax(425px,250px)); */
+            margin-top: 0px;
+            
+        }
+        .box{
+            border: 1px solid rgb(173, 172, 172); 
+            
+        }
+        #sol{
+            width: 164px;
+            height: 80px;
+            margin: 11px 23px;
+            filter: invert(87%);
+        }
+        #setting{
+           padding: 5px; 
+           margin-left: 20px; 
+        }
+        .setting{
+            display: flex;
+            align-items: centers
+            
+        }
+        #dash{
+           padding: 5px;
+           margin-left: 20px; 
+        }
+        .dash{
+            display: flex;
+            align-items: centers
+            
+        }
+        #resource{
+           padding: 5px;
+           margin-left: 20px;  
+        }
+        .resource{
+            display: flex;
+            align-items: centers
+            
+        }
+        #edu{
+           padding: 5px; 
+           margin-left: 20px; 
+        }
+        .edu{
+            display: flex;
+            align-items: centers
+            
+        }
+        #item1{
+            position: sticky;
+            background-color: rgb(211, 210, 210);
+        }
+        .class{
+            margin: 12px 0px;
+        }
+        .edu{
+            margin: 12px 0px;
+        }
+        .resource{
+            margin: 12px 0px;
+        }
+        #dropdown{
+            list-style: none;
+            margin-left: 12px;
+        }
+        .setting{
+            margin: 12px 0px;
+        }
+        #logout{
+           padding: 5px; 
+           /* margin-left: 20px;  */
+        }
+        
+        .logout{
+            margin: 12px 0px;
+            margin-left: 27px;
+            display: flex;
+            align-items: centers;
+        }
+        p{
+            margin: 0px;
+        }
+        
+        p#tp{
+            font-weight:900 ;
+            font-size: 17px;
+            margin: 15px 0px 0px 20px;
+            
+        }
+        #item2{
+            background-color: rgb(213, 226, 186);
+        }
+        #date{
+            color: gray;
+            font-size: 12px;
+            margin: 0px 0px 0px 22px;
+
+        }
+        .descrip{
+            margin: 10px 10px;
+            margin-top: 7px;
+            font-weight: 1200;
+            font-size: 18px;
+        }
+        .meeting{
+            height: 40px;
+            margin-left: 20px;
+        }
+        .item2cont{
+            display: grid;
+            grid-template-columns: 0.4649fr 0.4649fr ;
+            grid-template-rows: repeat(2,2fr);
+            height: 350px;
+            grid-row-gap: 1rem;
+            
+            
+        }
+        .itm2box:first-child{
+            
+            grid-column: 1/span 3;
+            margin: 28px;
+            margin-bottom: 10px;
+            height: 170px;
+        }
+
+        .itm2box{ 
+            /* background-color: aqua; */
+            border: 2px solid black;
+            /* grid-template-rows: repeat(2,2fr); */
+            margin-left: 28px;
+            height: 250px;
+        }  
+        #box2_2{
+            filter: invert(0%);
+            
+        }
+        #item4{
+            background-color: rgb(255, 248, 248) ;
+            position: s;
+        }
+        #note{
+            /* height: 500px;
+            width: 50px; */
+            padding: 5px;
+
+           margin-left: 20px; 
+        }
+        .note{
+            display: flex;
+            align-items: center;
+        }
+        #img4{
+            margin-left: 62px;
+            height: 100px;
+            width: 100px;
+            filter: invert(0%);
+        }
+        .name{
+            margin-left: 80px;
+        }
+        .posn{
+            color: gray;
+            margin-left: 85px;
+            font-size: 13px;
+        }
+        #npen{
+           padding: 5px; 
+           /* margin-left: 20px;  */
+        }
+        #gradbox{
+            filter: invert(0%);
+            box-sizing: border-box;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: repeat(2,1.5fr);
+        }
+        .img-grid{
+            box-sizing: border-box;
+            display: grid;
+            
+        }
+        .image1{
+            box-sizing: border-box;
+            width: 91%;
+            height: 215px;
+            margin: 0px 12px 0px 12px ;
+            /* margin-right: 12px; */
+            border-radius: 9px;
+        }
+        
+        .image2{
+            
+            width: 220px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        
+        #img3{
+            border: 0.1px solid rgb(73, 72, 72);
+            margin-left:10px;
+            /* float: right; */
+            margin-right: 12px;
+            width: 172px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .weeklyrpt{
+            position: relative;
+        }
+        .heading{
+            position: absolute;
+            color: azure;
+            top: 0%;
+            width: 100%;
+            font-size: 23px;
+            margin-left: 27px;
+        }
+        .descrp{
+            position: absolute;
+            color: rgb(190, 194, 194);
+            top: 30%;
+            width: 100%;
+            font-size: 14px;
+            margin-left: 30px;
+        }
+        .btn{
+            position: absolute;
+            color: rgb(190, 194, 194);
+            /* top: 70%;
+            width: 20%; */
+            font-size: 14px;
+            /* margin-left:0px ; */
+        }
+        .weeklyrpt{
+            position: relative;
+        }
+        .hdng{
+            position: absolute;
+            color:black;
+            top: 0%;
+            width: 100%;
+            font-size: 23px;
+            margin-left: 27px;
+        }
+        #clck{
+            
+           padding: 5px;
+           margin-left: 20px; 
+        }
+        .clck{
+            position: absolute;
+            top: 67px;
+            /* right: 5px; */
+            display: flex;
+            align-items: centers
+            
+        }
+        .progress{
+            position: absolute;
+            color: black;
+            top: 23%;
+            width: 100%;
+            font-size: 14px;
+            margin-left: 30px;
+        }
+        .analyse{
+            position: relative;
+        }
+        .hd{
+            position: absolute;
+            color: rgb(5, 7, 7);
+            top: 0%;
+            width: 100%;
+            font-size: 23px;
+            margin-left: 27px;
+        }
+        #complete{
+            
+            padding: 5px;
+            margin-left: 20px; 
+         }
+         .complete{
+             position: absolute;
+             top: 67px;
+             /* right: 5px; */
+             display: flex;
+             align-items: centers
+             
+         }
+        .compl{
+            position: absolute;
+            color: rgb(0, 2, 2);
+            top: 22%;
+            width: 100%;
+            font-size: 14px;
+            margin-left: 30px;
+        }
+
+        .hdg3{
+            display: block;
+            margin-left: 20px;
+            margin-top: 14px;
+            font-size: 17px;
+        }
+        #item3{
+            background-color: rgb(211, 210, 210);
+        }
+        .box3rd{
+            display: grid;
+        }
+        .items{
+            width: 360px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 3px auto;
+        }
+        .uphdg{
+            margin: 3px 12px;
+            font-size: 12px;
+            color: gray;
+        }
+        .head{
+            margin: 3px 12px;
+            font-weight: 250px;
+            font-size: 14px;
+        }
+        .iconpimg{
+            margin-left: 13px;
+            font-size: 13px;
+            color: gray;
+        }
+        .items2{
+            height: 115px;
+            width: 360px;
+            
+            border: 2px solid black;
+            margin: 10px auto;
+        }
+        .uphdg2{
+            margin: 3px 12px;
+            font-size: 12px;
+            color: gray;
+        }
+        .head2{
+            margin: 3px 12px;
+            font-weight: 250px;
+            font-size: 14px;
+        }
+        .iconpimg2{
+            
+            margin-left: 13px;
+            font-size: 13px;
+            color: gray;
+        }
+        .uphdg3{
+            margin: 3px 12px;
+            font-size: 12px;
+            color: gray;
+        }
+        .head3{
+            margin: 3px 12px;
+            font-weight: 250px;
+            font-size: 14px;
+        }
+        .iconpimg3{
+            
+            margin-left: 13px;
+            font-size: 13px;
+            color: gray;
+        }
+        .grid3{
+            display: grid;
+            grid-template-columns: 0.45fr 0.45fr;
+            grid-template-rows: 2fr 2fr;
+            height: 140px;
+            grid-gap: 1rem;
+            margin-left:  30px;
+        }
+        .thirdgrid{
+            border: 2px solid black;
+
+        }
+        
+        .bacteria{
+            display: flex;
+            align-items: centers;
+            font-size: 14px;
+            
+        }
+        .gry{
+            color: gray;
+            font-size: 12px;
+            margin: -17px 0px 18px 50px;
+        }
+        .virus{
+            display: flex;
+            align-items: centers;
+            font-size: 14px;
+            
+        }
+        .medsci{
+            display: flex;
+            align-items: centers;
+            font-size: 14px;
+            
+        }
+        .gene{
+            display: flex;
+            align-items: centers;
+            font-size: 14px;
+            
+        }
+        .h2{
+            margin: 14px 32px 0px 32px;
+        }
+        .gry1{
+            margin-left: 32px;
+            color: gray;
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+        .dow{
+            /* position: fixed; */
+            /* bottom: 0px; */
+            margin: 31px 73px 10px 88px;
+        }
+        .down1{
+            display: block;
+            margin-bottom: 30px;
+        }
+        .down2{
+            display: block;
+            margin-bottom: 30px;
+
+        }
+        .down3{
+            display: block;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="item1">
+            <img id="sol" src="solarious.PNG" alt="error">
+    
+                <div class="dash">
+                    <i id="dash"class="fa-solid fa-square-poll-vertical"></i>
+                    <p>Dashboard</p>
+                </div>
+
+                <div class="edu">
+                    <i id="edu" class="fa-solid fa-school"></i>
+                    <p>Education </p>
+                </div>
+                <div class="resource">
+
+                    <i id="resource" class="fa-sharp fa-solid fa-clipboard"></i>
+                      <p>Resources</p>
+                </div>
+            <ul id="dropdown">
+                    <li>Genetics</li>
+                    <li>DNA Synthesis</li>
+                    <li>Events</li>
+            </ul  >
+            <div class="setting" >
+                <i id="setting" class="fa-solid fa-gear"></i>
+                <p >Settings</p>
+            </div>
+            
+
+                <div class="logout" >
+                    <i id="logout" class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                    <p >Logout</p>
+                </div>
+            
+    </div>
+        <div class="box" id ="item2">
+            <p id ="tp">Today's Plan</p> 
+            <div id="date">June 14th,2022</div>
+            <div class="descrip">Sustainable development goals and health Innovation</div>
+                
+            <div class="meeting">Medi Team Meeting</div>
+            <div class="weeklyrpt">
+                <img class="image1" src="box1.jpg" alt="">
+                <h5 class="heading">Weekly Report</h5>
+                <p class="descrp">Track Your Performance</p>
+                <!-- <button class="btn">View Report</button> -->
+            </div>
+            <div id="gradbox" class="image-grid">
+                <!-- <img  src="box1.jpg" alt=""> -->
+                <div class="study">
+
+                    <img class="image2" src="box2.jpg" alt="">
+                    <h5 class="hdng">Study 78X</h5>
+                    <div class="clck">
+                        <i id="clck" class="fa-solid fa-clock"></i>
+                        <p class="">In Progress</p>
+                    </div>
+                </div>
+                <div class="analyse">
+                    <img id="img3" src="box3.jpeg" alt="">
+                    <h5 class="hd">Analyse</h5>
+                    <div class="complete">
+                        <i id="complete" class="fa-solid fa-circle-check"></i>
+                        <p class="">Completed</p>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="box" id ="item3">
+                <h3 class="hdg3">
+                    Monthly Pinned
+                </h3> 
+                <div class="box3rd">
+                    <div class="items">
+                        <div class="uphdg">Next Gen Immuno</div>
+                        <div class="head">
+                            Multispecific liquids analysis
+                        </div>
+                        <div class="iconpimg">
+                            <!-- <i id="iconpimg" class="fa-sharp fa-regular fa-square-1"></i> -->
+                            <i id="iconpimg" class="fa-sharp fa-solid fa-square-1"></i>
+                            <p>New Feedback</p>
+                        </div>
+                    </div>
+                    <div class="items2">
+                        <div class="uphdg2">Harmony</div>
+                        <div class="head2">
+                            Protein characterization during childhood and pregnacny
+                        </div>
+                        <div class="iconpimg2">
+                            <!-- <i id="iconpimg" class="fa-sharp fa-regular fa-square-1"></i> -->
+                            <i id="iconpimg" class="fa-sharp fa-solid fa-square-1"></i>
+                            <p>Deadline is today</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="uphdg2">Pharmaceutical</div>
+                        <div class="head2">
+                            Quick element dissloution testing
+                        </div>
+                        <div class="iconpimg2">
+                            <!-- <i id="iconpimg" class="fa-sharp fa-regular fa-square-1"></i> -->
+                            <i id="iconpimg" class="fa-sharp fa-solid fa-square-1"></i>
+                            <p>Accepted</p>
+                        </div>
+
+                    </div>
+                </div>
+            <div class="h2">
+                My Learning
+                
+            </div>
+            <p class="gry1">Your Progress Of Medical Lectures</p>
+            <div class="grid3">
+                <div class="thirdgrid">  
+                     <div class="virus">
+                        <img src="https://img.icons8.com/color/48/null/virus.png"/>
+                        <h3 class="virus">
+                            Viruses
+                        </h3>
+                     </div>
+                     <p class="gry">96% progress</p>
+                </div>
+                <div class="thirdgrid">  
+                    <div class="bacteria">
+                       <!-- <link rel="stylesheet" href="https://icons8.com/icon/13201/bacteria"> 
+                     -->
+                     <img src="https://img.icons8.com/color/48/null/bacteria.png"/>
+                       <h3 class="bacteria">
+                           Bacterial cells
+                       </h3>
+                    </div>  
+                    <p class="gry">33% progress</p>
+
+                </div>
+                <div class="thirdgrid"> 
+                    <div class="medsci">
+                        
+                      
+                      <img src="https://img.icons8.com/color/48/null/laboratory.png"/>
+                        <h3 class="medsci">
+                           Medi Science
+                        </h3>
+                     </div>  
+                     <p class="gry">7% progress</p>
+ 
+                </div>
+                <div class="thirdgrid">  
+                    <div class="gene">
+                        <img src="https://img.icons8.com/color/48/null/biotech.png"/>
+                        <h3 class="gene">
+                            Human gens
+                        </h3>
+                     </div>  
+                     <p class="gry">58% progress</p>
+ 
+                </div>
+            </div>   
+        </div>
+        <div class="box" id="item4">
+            
+            <!-- <i class="fa-regular fa-user"></i> -->
+            <img id="img4" src="user.png" alt="">
+            <div class="name">
+                Dr. Riddle
+                <br>
+
+            </div>
+            <div class="posn">
+                Scientist
+            </div>
+            <!-- <img src="https://icons8.com/icon/82ixf4KHn6za/notepad" alt=""> -->
+            <!-- <img src="https://img.icons8.com/color/48/null/virus.png"/> -->
+            
+            <div class="dow">
+
+                <img class="down1" src="https://img.icons8.com/color/48/000000/notepad.png"/>
+                <img class="down2" src="https://img.icons8.com/color/48/null/speech-bubble-with-dots.png"/>
+                <img class="down2" src="https://img.icons8.com/color/48/000000/add--v1.png"/>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
